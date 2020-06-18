@@ -54,7 +54,7 @@ app.delete("/repositories/:id", function (request, response) {
     var repositoryIndex = repositories.findIndex(function (repository) { return repository.id === id; });
     if (repositoryIndex < 0) {
         return response.status(400).json({
-            error: 'Repository not found.'
+            error: 'Repository not found...'
         });
     }
     repositories.splice(repositoryIndex, 1);
